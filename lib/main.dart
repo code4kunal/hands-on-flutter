@@ -28,11 +28,14 @@ class MyApp extends StatelessWidget {
         ),
         RaisedButton(
           child: Text('Answer2'),
-          onPressed: answerQuestion,
+          onPressed: () => 
+            print('Answer 2 chosen'),
         ),
         RaisedButton(
           child: Text('Answer3'),
-          onPressed: answerQuestion,
+          onPressed: () {
+            print('Answer 3 chosen');
+          },
         ),
       ]),
     ));
