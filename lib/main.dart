@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import'./question.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -16,7 +18,7 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       questionIndex = state;
     });
-    print(questionIndex);
+  print(questionIndex);
   }
 
   @override
@@ -32,7 +34,7 @@ class _MyAppState extends State<MyApp> {
         title: Text('My First App'),
       ),
       body: Column(children: [
-        Text(questions[questionIndex]),
+        Question(questions[questionIndex]),
         RaisedButton(
           child: Text('Answer1'),
           onPressed: () => answerQuestion(0),
@@ -43,7 +45,8 @@ class _MyAppState extends State<MyApp> {
         ),
         RaisedButton(
           child: Text('Answer3'),
-          onPressed: () => answerQuestion(2),
+          onPressed:
+            () => answerQuestion(2)
         ),
       ]),
     ));
