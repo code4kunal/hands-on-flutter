@@ -22,9 +22,9 @@ Widget build(BuildContext context) {
         Question(
           question[questionIndex]['questionText'],
         ), //Question
-        ...(question[questionIndex]['answers'] as List<String>)
+        ...(question[questionIndex]['answers'] as List<Map<String, Object>>)
         .map((answer) {
-          return Answer(answerQuestion, answer);
+          return Answer(() => answerQuestion(answer['score']), answer['text']);
         }).toList()
       ]
     ); //Column
